@@ -1,0 +1,22 @@
+
+  <div class="dificultad-div"> 
+    <h1 style="text-align: center; border-radius: 20px; padding: 5px 10px; font-size: 30px;color: white;background: linear-gradient(to right, #B006D0, #4E0894) !important; ">Elige la dificultad:</h1>
+   
+      <ion-radio-group value="facil" (ionChange)="onRadioGroupChange($event)">
+        <ion-radio class="facil" color="primary" justify="space-between" value="facil">FÁCIL</ion-radio><br />
+        <ion-radio class="medio" color="secondary" justify="space-between" value="medio">INTERMEDIO</ion-radio><br />
+        <ion-radio class="dificil" color="tertiary" justify="space-between" value="dificil">DIFÍCIL</ion-radio>
+      </ion-radio-group>
+    
+  </div>
+  <div class="spinner" *ngIf="jugarLoading">
+    <ion-spinner name="circles" color="primary"></ion-spinner>
+  </div>
+  <div >
+
+      <ion-button class="animate__animated animate__tada animate__infinite" style="font-size: 30px;min-height: auto; margin-top: 30px;" (click)="jugar()" expand="full" color="primary">
+        JUGAR
+      </ion-button>
+
+  </div>
+

@@ -1,0 +1,80 @@
+<div class="boton-flotante">
+  <!-- <ion-icon color="secondary"  name="arrow-back-outline"></ion-icon> -->
+  <ion-icon (click)="menu()" color="light" name="arrow-back-circle-sharp" size="large"></ion-icon>
+
+</div>
+
+<div class="container">
+  <div class="seleccionarModo">
+      <h1 class="tituloPpal">Mejores Jugadores</h1>
+
+  </div>
+
+  <div class="seleccionarModo">
+    <h1 class="facil">Dificultad: Fácil</h1>
+    <ion-spinner *ngIf="loadingF" name="circles" color="primary"></ion-spinner>
+
+    <p *ngIf="!jugadoresFacil.length && !loadingF"> Aún no hay puntajes. ¡Sé el primero!</p>
+    <ion-card *ngIf="jugadoresFacil.length">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row style="background: linear-gradient(to right, #B006D0, #4E0894);">
+            <ion-col size="4"><b>Nombre</b></ion-col>
+            <ion-col size="4"><b>Tiempo</b></ion-col>
+            <ion-col size="4"><b>Fecha</b></ion-col>
+          </ion-row>
+          <ion-row *ngFor="let jugador of topFacil">
+            <ion-col size="4">{{ jugador.nombre }}</ion-col>
+            <ion-col size="4">{{ jugador.tiempoForm }}</ion-col>
+            <ion-col size="4">{{ jugador.fechaForm }}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="seleccionarModo">
+    <h1 class="medio">Dificultad: Intermedio</h1>
+    <ion-spinner *ngIf="loadingM" name="circles" color="primary"></ion-spinner>
+
+    <p *ngIf="!jugadoresMedio.length && !loadingM"> Aún no hay puntajes. ¡Sé el primero!</p>
+
+    <ion-card *ngIf="jugadoresMedio.length > 0">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row style="background: linear-gradient(to right, #B006D0, #4E0894);">
+            <ion-col size="4"><b>Nombre</b></ion-col>
+            <ion-col size="4"><b>Tiempo</b></ion-col>
+            <ion-col size="4"><b>Fecha</b></ion-col>
+          </ion-row>
+          <ion-row *ngFor="let jugador of topMed">
+            <ion-col size="4">{{ jugador.nombre }}</ion-col>
+            <ion-col size="4">{{ jugador.tiempoForm }}</ion-col>
+            <ion-col size="4">{{ jugador.fechaForm }}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="seleccionarModo" style="margin-bottom: 60px;">
+    <h1 class="dificil">Dificultad: Difícil</h1>
+    <ion-spinner *ngIf="loadingD" name="circles" color="primary"></ion-spinner>
+
+    <p *ngIf="!jugadoresDificil.length && !loadingD"> Aún no hay puntajes. ¡Sé el primero!</p>
+    <ion-card *ngIf="jugadoresDificil.length > 0">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row style="background: linear-gradient(to right, #B006D0, #4E0894);">
+            <ion-col size="4"><b>Nombre</b></ion-col>
+            <ion-col size="4"><b>Tiempo</b></ion-col>
+            <ion-col size="4"><b>Fecha</b></ion-col>
+          </ion-row>
+          <ion-row *ngFor="let jugador of topDif">
+            <ion-col size="4">{{ jugador.nombre }}</ion-col>
+            <ion-col size="4">{{ jugador.tiempoForm }}</ion-col>
+            <ion-col size="4">{{ jugador.fechaForm }}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</div>

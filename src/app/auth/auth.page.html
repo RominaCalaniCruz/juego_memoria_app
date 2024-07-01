@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true">
+  <ion-fab class="usuario1" slot="fixed" vertical="bottom" horizontal="center">
+    <ion-fab-button (click)="autocomplete('admin@admin.com','111111')">
+      <ion-icon name="person"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab  class="usuario2" slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="autocomplete('invitado@invitado.com','222222')">
+      <ion-icon name="at-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab  class="usuario3" slot="fixed" vertical="bottom" horizontal="start">
+    <ion-fab-button (click)="autocomplete('anonimo@anonimo.com','444444')">
+      <ion-icon name="accessibility"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card>
+    <form [formGroup]="ionicForm">
+
+      <div class="ion-text-center ion-margin-vertical lock">
+        <img src="../../assets/imgs/icono.png" alt="" style="width: 150px; ">
+      </div>
+
+      <ion-item lines="none" class="ion-margin-horizontal ion-margin-top">
+        <ion-button slot="start" fill="clear" color="medium">
+          <ion-icon slot="icon-only" name="mail-outline"></ion-icon>
+        </ion-button>
+        <ion-input style="font-size: large;background: rgba(255, 255, 255, 0.3) !important;"
+          labelPlacement="floating"
+          type="email"
+          formControlName="email"
+          placeholder="Ingresa tu correo"
+        >
+          <div slot="label" style="font-size: large; letter-spacing: normal !important;">Correo<ion-text color="danger"></ion-text></div>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="ion-margin" lines="none">
+        <ion-button slot="start" fill="clear" color="dark">
+          <ion-icon slot="icon-only" name="key-outline"></ion-icon>
+        </ion-button>
+
+        <ion-input style="font-size: large;"
+          labelPlacement="floating"
+          [type]="isPwd ? 'text' : 'password'"
+          placeholder="Ingresa tu contraseña"
+          formControlName="password"
+        >
+          <div slot="label" style="font-size: large;">Contraseña<ion-text color="danger"></ion-text></div>
+        </ion-input>
+        <ion-button slot="end" fill="clear" color="danger" (click)="togglePwd()">
+          <ion-icon slot="icon-only" [name]="isPwd ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <div class="ion-margin submit" >
+        <ion-button expand="block" size="large" (click)="login()">
+          <ion-text style="font-size: 30px;letter-spacing: 5px;">Iniciar sesión</ion-text>
+        </ion-button>
+      </div>
+    </form>
+  </ion-card>
+</ion-content>

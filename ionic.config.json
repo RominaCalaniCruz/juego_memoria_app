@@ -1,0 +1,7 @@
+{
+  "name": "juego_memoria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

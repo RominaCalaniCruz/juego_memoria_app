@@ -1,0 +1,41 @@
+<div class="timer-container" *ngIf="estaJugando">
+  <div class="timer">
+    <span>
+        {{ minutes }}:{{ seconds | number: '2.0' }}
+    </span>
+  </div>
+</div>
+
+<div class="texto-flotante">
+  <ion-icon (click)="abandonarPartida()" color="light" name="close-circle" size="large"></ion-icon>
+
+</div>
+
+<div class="resultados" *ngIf="!estaJugando">
+  <h1 style="text-align: center; border-radius: 20px; padding: 5px 10px; font-size: 30px;color: white;background: linear-gradient(to right, #B006D0, #4E0894) !important; ">Tus resultados:</h1>
+  <div class="timer">
+
+  <span> {{segTotales}} segundos</span>
+</div>
+<ion-button class="animate__animated animate__tada animate__infinite" style="font-size: 30px;min-height: auto; margin-top: 30px;" (click)="reiniciar()" expand="full" color="primary">
+  JUGAR DE NUEVO
+</ion-button>
+</div>
+
+<div class="spinner" *ngIf="resultadosLoading">
+
+  <ion-spinner name="circles" color="primary"></ion-spinner>
+</div>
+
+<div id="game" *ngIf="estaJugando">
+  <div
+    *ngFor="let card of cards"
+    class="card"
+    [ngClass]="{'active': card.active}"
+    (click)="activate(card)"
+  >
+    <div class="back"></div>
+    <div class="face"><img [src]="card.image" alt="Card Image" /></div>
+  </div>
+</div>
+<div id="stats">{{ currentAttempts }} intentos</div>

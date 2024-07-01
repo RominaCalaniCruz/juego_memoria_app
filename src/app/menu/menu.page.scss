@@ -1,0 +1,89 @@
+.dificultad-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.192); /* Fondo blanco semitransparente */
+  z-index: 9999; /* Asegura que se superponga a otros elementos */
+  ion-spinner {
+      width: 120px;
+      height: 120px;
+    }
+}
+
+ion-radio-group{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+  ion-radio.facil{
+    background: linear-gradient(to right, #26ca10, #019101) !important;
+    margin: 10px 0;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 10px;
+
+  }
+  ion-radio.medio{
+    background: linear-gradient(to right, #e9ec07, #aca900) !important;
+    margin: 10px 0;
+    padding: 10px 10px;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+
+  }
+  ion-radio.dificil{
+    background: linear-gradient(to right, #e04000, #db0505) !important;
+    margin: 10px 0;
+    padding: 10px 10px;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+
+  }
+
+
+  ion-radio::part(container) {
+    width: 30px;
+    height: 30px;
+  
+    border-radius: 8px;
+    border: 2px solid #ddd;
+  }
+  
+  ion-radio::part(mark) {
+    background: none;
+    transition: none;
+    transform: none;
+    border-radius: 0;
+  }
+  
+  ion-radio.radio-checked::part(container) {
+    background: #ffffff;
+    border-color: transparent;
+  }
+  
+  ion-radio.radio-checked::part(mark) {
+    width: 6px;
+    height: 10px;
+  
+    border-width: 0px 2px 2px 0px;
+    border-style: solid;
+    border-color: #000000;
+  
+    transform: rotate(45deg);
+  }

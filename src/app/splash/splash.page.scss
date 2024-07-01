@@ -1,0 +1,29 @@
+.logo img{
+    width: 150px;
+    height: 150px;
+  }
+
+  ion-content{
+    // --background: linear-gradient(to right, #B006D0, #4E0894);
+    --background: url('../../assets/imgs/background.png') no-repeat center center/cover;
+  }
+
+  .splash{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .nombre-texto{
+        // color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+  }
+
+  h1{
+    color: white;
+    font-size: 70px;
+    text-shadow: 3px 4px 5px rgba(228, 228, 228, 0.719);
+  }

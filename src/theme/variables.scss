@@ -1,0 +1,23 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+:root {
+    --ion-color-primary: #AA07CC;
+    --animate-duration: 2.2s;
+    --ion-color-secondary: #207571;
+    --ion-color-tertiary: rgb(189, 32, 32);
+    --ion-color-primary-rgb: 131,100,179;
+	--ion-color-primary-contrast: #ffffff;
+	--ion-color-primary-contrast-rgb: 255,255,255;
+	--ion-color-primary-shade: #acacac;
+	--ion-color-primary-tint: #363636;
+
+.boton-cancelar {
+        color: white;
+        background-color: #499c70; /* Color de fondo para el botón de cancelar */
+      }
+      
+      .boton-eliminar {
+        color: white;
+        background-color: rgb(194, 12, 12); /* Color de fondo para el botón de eliminar */
+      }
+}

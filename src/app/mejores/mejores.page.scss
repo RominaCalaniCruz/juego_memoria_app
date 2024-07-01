@@ -1,0 +1,95 @@
+.container {
+    // background-color: #000000; /* Color de fondo */
+    color: white; /* Color de texto */
+  }
+  .boton-flotante {
+    background: rgba(56, 55, 55, 0.651);
+    position: fixed;
+    top: -3px; /* Ajusta esta propiedad según el tamaño de tu encabezado */
+    left: 0px; /* Distancia del borde izquierdo */
+    z-index: 999; /* Asegura que esté por encima del contenido */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+/* En tu archivo CSS (por ejemplo, styles.css) */
+.seleccionarModo{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    // margin-top: 5px;
+    font-size: 32px;
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+h1.tituloPpal{
+  text-shadow: 5px 3px 7px #B006D0;
+  font-size: 40px !important;
+}
+h1.facil{
+  
+  background: linear-gradient(to right, #26ca10, #019101) !important;
+}
+h1.medio{
+  background:  linear-gradient(to right, #e9ec07, #aca900) !important;
+}
+h1.dificil{
+  background: linear-gradient(to right, #e04000, #db0505) !important;
+
+}
+
+p{
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 3px 10px;
+    background-color: black;
+    -webkit-box-shadow: -1px 3px 16px 1px rgba(255,255,255,1);
+-moz-box-shadow: -1px 3px 16px 1px rgba(255,255,255,1);
+box-shadow: -1px 3px 16px 1px rgba(255,255,255,1);
+}
+ion-spinner {
+    width: 90px;
+    height: 90px;
+  }
+
+
+
+ion-card {
+    background-color: #85678b; /* Fondo semi transparente */
+    border: 1px solid black; /* Borde negro */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+    width: 97%;
+  }
+  
+  ion-card-content {
+    padding: 0; /* Eliminar el relleno */
+  }
+  
+  ion-grid {
+    padding: 0px; /* Agregar un espacio interno */
+  }
+  
+  ion-row {
+    border-bottom: 1px solid black; /* Borde inferior negro */
+  }
+  
+  ion-col {
+    text-align: center;
+    color: white;
+    font-family: "Delicious Handrawn" ;
+    letter-spacing: 3px;
+    padding: 3px 1px;
+    font-size: 23px;
+    border-right: 1px solid black; /* Borde derecho negro */
+    // padding: 10px; /* Agregar espacio interno */
+  }
+  
+  ion-col:last-child {
+    border-right: none; /* Eliminar el borde derecho en la última columna */
+  }
+  

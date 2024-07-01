@@ -1,0 +1,32 @@
+
+<ion-content [fullscreen]="true">
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="cerrarSesion()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+    <ion-fab-button (click)="verPuntaje()">
+      <ion-icon name="trophy-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-header>
+    <ion-toolbar
+      style="--background: linear-gradient(to right, #b006d0, #4e0894)"
+    >
+      <ion-title
+        style="
+          font-size: 30px;
+          color: white;
+          text-align: center;
+          margin-bottom: 10px;
+        "
+        >Juego de memoria</ion-title
+      >
+    </ion-toolbar>
+  </ion-header>
+
+  <router-outlet></router-outlet>
+</ion-content>
