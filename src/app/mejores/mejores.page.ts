@@ -136,8 +136,6 @@ export class MejoresPage implements OnInit {
   return formattedDate;
   }
   ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
     this.audio.pause();
   this.audio.currentTime = 0;
   }

@@ -12,7 +12,7 @@ export class AppComponent {
     private platform: Platform,
     public router:Router
   ) {
-    // this.initializeApp();
+    this.initializeApp();
   }
 
   async initializeApp() {

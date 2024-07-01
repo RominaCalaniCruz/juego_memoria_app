@@ -73,7 +73,6 @@ export class ModoDificilPage implements OnInit {
               console.log('Saldo eliminado');
               this.utilsSvc.guardarEnLocalStorage('estado', {estado: false});
               this.utilsSvc.routerLink('/home/menu');
-              // Aquí puedes agregar la lógica para eliminar el saldo
             }
           }
         ]
@@ -139,10 +138,9 @@ export class ModoDificilPage implements OnInit {
               this.resultadosLoading = false;
               this.estaJugando = false;
             }, 1500);
-            // Aquí puedes mostrar un mensaje de felicitaciones o realizar otras acciones
+           
           }
         } else {
-          // Las imágenes son diferentes
           setTimeout(() => {
             this.selectedCards.forEach(c => c.active = false);
             this.selectedCards = [];
@@ -157,12 +155,10 @@ export class ModoDificilPage implements OnInit {
     this.minutes = 0;
     this.seconds = 0;
 
-    // Clear any existing timer
     if (this.interval) {
       clearInterval(this.interval);
     }
 
-    // Start a new timer
     this.interval = setInterval(() => {
       this.seconds++;
 
@@ -180,7 +176,6 @@ export class ModoDificilPage implements OnInit {
     }
   }
   ngOnDestroy() {
-    // Clear the timer when the component is destroyed
     if (this.interval) {
       clearInterval(this.interval);
     }
